@@ -1,3 +1,4 @@
+<!-- Spur Corp Academy Registration Form v4 - 202608141415 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,11 +38,11 @@
     .hint{display:block;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:400;color:#666;margin-top:4px;line-height:1.5}
     .field{margin-bottom:20px}
 
-    input[type=text],input[type=email],input[type=tel],select,textarea{width:100%;padding:12px 14px;font-family:'DM Sans',sans-serif;font-size:14px;color:#fff;background:#111;border:1.5px solid #222;border-radius:7px;outline:none;transition:border-color 0.15s;appearance:none}
-    input::placeholder,textarea::placeholder{color:#555}
+    input[type=text],input[type=email],input[type=tel],select,textarea{width:100%;padding:12px 14px;font-family:'DM Sans',sans-serif;font-size:14px;color:#111;background:#ffffff;border:1.5px solid #333;border-radius:7px;outline:none;transition:border-color 0.15s;appearance:none}
+    input::placeholder,textarea::placeholder{color:#999}
     input:focus,select:focus,textarea:focus{border-color:#F59AE3}
     select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23F59AE3' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:40px;cursor:pointer}
-    select option{background:#111;color:#fff}
+    select option{background:#ffffff;color:#111}
     textarea{resize:vertical;min-height:84px}
 
     .radio-row{display:flex;gap:8px;flex-wrap:wrap}
@@ -89,15 +90,15 @@
     <!-- Netlify form: name="agency-registration" tells Netlify what to call this form in the dashboard -->
     <!-- data-netlify="true" enables form detection -->
     <!-- action="/success" redirects to a success page after submission (create a success.html or use any path) -->
-    <form name="agency-registration"
-          method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-          action="/success">
+    <!-- Formspree: replace YOUR_FORM_ID below with the ID from formspree.io/forms -->
+    <form
+      action="https://formspree.io/f/mvkpqweb"
+      method="POST">
 
-      <!-- Hidden field Netlify requires for its bot filter -->
-      <input type="hidden" name="form-name" value="agency-registration"/>
-      <p style="display:none"><label>Don't fill this out: <input name="bot-field"/></label></p>
+      <!-- Honeypot spam filter -->
+      <input type="text" name="_gotcha" style="display:none"/>
+      <!-- Redirect after submission -->
+      <input type="hidden" name="_next" value="https://spurcorpacademy2.netlify.app/success"/>
 
       <div class="form-body">
 
